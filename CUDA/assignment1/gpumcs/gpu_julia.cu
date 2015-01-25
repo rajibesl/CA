@@ -5,7 +5,7 @@
 
 __device__ inline int iterate_pixel(float x, float y, float c_re, float c_im)
 {
-	int c=0;
+	int c=0; 
 	float z_re=x;
 	float z_im=y;
 	while (c<255) {
@@ -29,7 +29,7 @@ __global__ void calc_fractal(int width, int height, float c_re, float c_im, unsi
 
 	dest[x+y*width]=iterate_pixel(f_x,f_y,c_re,c_im);
 }
-
+//bullshit
 
 // Write a width by height 8-bit color image into File "filename"
 void write_ppm(unsigned char* data,unsigned int width,unsigned int height,char* filename)
